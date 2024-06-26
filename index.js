@@ -4,7 +4,18 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 //include inputs
 const inputs = require("./inputs");
+// include shapes
+const shapes = require("./lib/shapes");
 
+
+class Text {
+    constructor(letters) {
+    this.letters = letters;
+    }
+    generateSVG() {
+        return '<text x="10" y="10">' + this.letters + '</text>';
+    }
+}
 
 
 // initialize the app
@@ -13,15 +24,21 @@ function init() {
     inquirer
         .prompt(inputs)
         .then((answers) => {
-            console.log(answers.letters)
-        });
-    //get SVG file content
-    const generateSVG = (letters) => {
-        new Text(letters);
-        }
-    // write the SVG file
-    writeToFile('logo.svg', generateSVG(letters));
+            console.log(answers);
+             //get SVG file content
+            const mySVG = new Text(answers.letters);
 
+                
+
+            // write the SVG file
+            fs.writeFile('logo.svg', mySVG.generateSVG(), (err) => {
+                if (err) {
+                    console.error(err);
+                } else {
+                    console.log('file created');
+                }
+            });
+        });
 }
 
 init();
