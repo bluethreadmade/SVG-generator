@@ -13,9 +13,14 @@ function init() {
     inquirer
         .prompt(inputs)
         .then((answers) => {
-            console.log(answers)
+            console.log(answers.letters)
         });
-    //write the .svg file
+    //get SVG file content
+    const generateSVG = (letters) => {
+        new Text(letters);
+        }
+    // write the SVG file
+    writeToFile('logo.svg', generateSVG(letters));
 
 }
 
