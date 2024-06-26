@@ -26,3 +26,15 @@ const inputs = [
         message: 'What color should your shape be?'
     }
 ]
+
+// initialize the app
+function init() {
+    // ask the questions
+    inquirer
+        .prompt(inputs)
+        .then((answers) => {
+            console.log(answers)
+        })
+}
+
+init();
