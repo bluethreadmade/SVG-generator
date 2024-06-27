@@ -19,9 +19,9 @@ function init() {
             const mySVGShape = new Shape(answers.shape, answers.shapeColor)
 
             function generateSVG(mySVGText, mySVGShape) {
-                return `<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    ${mySVGText.generateSVGText()}
+                return `<svg width="600" height="300" version="1.1" xmlns="http://www.w3.org/2000/svg">
                     ${mySVGShape.generateSVGShape()}
+                    ${mySVGText.generateSVGText()}
                 </svg>`;
                 
             };
