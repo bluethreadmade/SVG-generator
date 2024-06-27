@@ -19,8 +19,8 @@ function init() {
 
             function renderSVG(mySVG) {
                 return `<svg width="600" height="300" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    ${mySVG.renderTextAndShape()}
-                </svg>`;
+${mySVG.renderTextAndShape()}
+</svg>`;
                 
             };
 
