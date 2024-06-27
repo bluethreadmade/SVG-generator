@@ -4,8 +4,8 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 //include inputs
 const inputs = require("./inputs");
-// include Text class and Shape class
-const { Shape, Triangle } = require("./lib/shapes");
+// include Shape class and specific shapes classes
+const { Shape, Triangle, Circle, Square } = require("./lib/shapes");
 
 // initialize the app
 function init() {
