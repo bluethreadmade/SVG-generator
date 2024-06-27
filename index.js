@@ -19,7 +19,7 @@ function init() {
             const mySVGShape = new Shape(answers.shape, answers.shapeColor)
 
             function generateSVG(mySVGText, mySVGShape) {
-                return `<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
+                return `<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
                     ${mySVGText.generateSVGText()}
                     ${mySVGShape.generateSVGShape()}
                 </svg>`;
@@ -27,7 +27,7 @@ function init() {
             };
 
             // write the SVG file
-            fs.writeFile('logo.svg', generateSVG(), (err) => {
+            fs.writeFile('logo.svg', generateSVG(mySVGText, mySVGShape), (err) => {
                 if (err) {
                     console.error(err);
                 } else {
