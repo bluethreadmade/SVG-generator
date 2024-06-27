@@ -15,6 +15,15 @@ function init() {
         .then((answers) => {
             console.log(answers);
             //get SVG file content
+
+            if (answers.shape === 'triangle') {
+                const shape = Triangle
+            } else if (answers.shape === 'circle'){
+                const shape = Circle
+            } else {
+                const shape = Square
+            }
+
             const mySVG = new Triangle(answers.letters, answers.textColor, answers.shapeColor);
 
             function renderSVG(mySVG) {

@@ -13,7 +13,7 @@ const inputs = [
         type: 'list',
         name: 'shape',
         message: 'Choose a shape for your logo',
-        choices: ['square', 'circle', 'triangle']
+        choices: ['Square', 'Circle', 'Triangle']
     },
     {
         type: 'input',
