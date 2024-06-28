@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 // Include fs
 const fs = require("fs");
 //include inputs
-const inputs = require("./inputs");
+const inputs = require("./lib/inputs");
 // include Shape class and specific shapes classes
 const { Shape, Triangle, Circle, Square } = require("./lib/shapes");
 
