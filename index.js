@@ -13,7 +13,6 @@ function init() {
     inquirer
         .prompt(inputs)
         .then((answers) => {
-            console.log(answers);
             //get SVG file content
             //declare shape outside of if statements for use after
             let shape
@@ -40,7 +39,7 @@ ${mySVG.renderTextAndShape()}
                 if (err) {
                     console.error(err);
                 } else {
-                    console.log('file created');
+                    console.log('Generated logo.svg');
                 }
             });
         });
