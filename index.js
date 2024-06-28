@@ -29,7 +29,7 @@ function init() {
 
             function renderSVG(mySVG) {
                 return `<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
-${mySVG.renderTextAndShape()}
+${mySVG.render()}
 </svg>`;
                 
             };
@@ -39,7 +39,7 @@ ${mySVG.renderTextAndShape()}
                 if (err) {
                     console.error(err);
                 } else {
-                    console.log('Generated logo.svg');
+                    console.log('Generate logo.svg');
                 }
             });
         });
